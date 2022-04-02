@@ -1,0 +1,15 @@
+{
+  "homepage": ".",
+  "name": "portofoliu_2022",
+  "version": "1.0.0",
+  "description": "Project reffering to Personal Portofolio ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bondane Catalin",
+  "license": "ISC",
+  "dependencies": {
+    "styled-components": "^4.4.1"
+  }
+}
