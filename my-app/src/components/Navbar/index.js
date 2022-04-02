@@ -1,15 +1,23 @@
 import React from "react";
-import {FaBars} from "react-icons/fa"
-import { Nav, NavbarContainer, NavLogo,MobileIcon,NavMenu,NavItem,NavLinks } from "./navbarElements";
+import { FaBars } from "react-icons/fa";
+import {
+  Nav,
+  NavbarContainer,
+  NavLogo,
+  MobileIcon,
+  NavMenu,
+  NavItem,
+  NavLinks,
+} from "./navbarElements";
+import IntroSection from "../IntroSection";
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   return (
     <>
-        <NavLogo to="/">Logo</NavLogo>
+      <NavLogo to="/">Logo</NavLogo>
       <Nav>
         <NavbarContainer>
-        
-        <MobileIcon>
+          <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
@@ -25,6 +33,7 @@ const Navbar = () => {
           </NavMenu>
         </NavbarContainer>
       </Nav>
+      <IntroSection />
     </>
   );
 };
