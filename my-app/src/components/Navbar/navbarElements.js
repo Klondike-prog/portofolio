@@ -8,7 +8,7 @@ export const Bg = styled.div`
 export const Nav = styled.nav`
   top: 0;
   left: 28.5%;
-  height: 70px;
+  height: 80px;
   background: #119872;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
@@ -20,14 +20,8 @@ export const Nav = styled.nav`
   justify-content: center;
   align-items: center;
   z-index: 10;
+  overflow:hidden;
 
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 
   @media screen and (max-width: 968px) {
     transition: 0.8s all ease;
@@ -46,14 +40,37 @@ export const NavbarContainer = styled.div`
   width: 100%;
 `;
 export const NavLogo = styled(LinkRouter)`
-  left: 3%;
+  left: 6%;
   top: 2%;
-  position: absolute;
+  position: fixed;
   color: black;
   cursor: pointer;
   font-size: 1.5rem;
-  float:left;
-  text-decoration: none;
+  z-index: 10;
+  transform-origin:top left;
+  &:hover {
+    animation: fall 2s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes fall {
+    20%,60%{
+      opacity:1;
+      transform:rotate(10deg);
+    }
+    40%,80%{
+      opacity:1;
+      transform:rotate(80deg);
+    }
+    90%{
+      opacity: 0;
+      transform:translateY(1000px);
+      transform:roate(120deg);
+    }
+    100%{
+      opacity:0;
+    }
+  }
+
 `;
 export const MobileIcon = styled.div`
   display: none;
@@ -71,22 +88,32 @@ export const MobileIcon = styled.div`
 `;
 export const NavMenu = styled.ul`
   padding-left: 8%;
-  padding-bottom: 12px;
+  padding-bottom: 10px;
   display: flex;
   align-items: center;
   list-style: none;
   text-align: center;
   margin-right: 10px;
+  overflow: hidden;
   @media screen and (max-width: 968px) {
     display: none;
   }
 `;
 
 export const NavItem = styled.li`
-  padding-left: 10px;
   font-family: "Minecraft", sans-serif;
   height: 80px;
   font-size: 2.1rem;
+  
+  &:hover {
+    background-color: #fff;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0, 0, 100, 100);
+    height: 90px;
+    width: 100%;
+    border-top-left-radius: 10rem;
+    border-top-right-radius: 10rem;
+  }
 `;
 
 export const NavLinks = styled(LinkScroll)`
@@ -97,7 +124,26 @@ export const NavLinks = styled(LinkScroll)`
   padding: 0 2.5rem;
   height: 100%;
   cursor: pointer;
-  &.active {
-    border-bottom: 3px solid #01bf71;
+  &:hover{
+    animation: scale 0.5s ease-in-out;
+    animation-fill-mode: forwards;
   }
+
+  @keyframes scale {
+    0% {
+      transform: scale(1.0);
+  }
+
+  100% {
+      transform: scale(1.2);
+  }
+  }
+  
+`;
+
+export const Img = styled.img`
+  height: 30%;
+  width: 30%;
+  left: 10%;
+  filter: drop-shadow(5px 5px 10 px #fff);
 `;
