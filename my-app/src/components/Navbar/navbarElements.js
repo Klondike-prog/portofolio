@@ -51,7 +51,7 @@ export const NavLogo = styled(LinkRouter)`
   &:hover {
     animation: fall 2s ease-in-out;
     animation-fill-mode: forwards;
-    animation-delay: 0.5s;
+    animation-delay: 0.4s;
   }
   @keyframes fall {
     20%,
@@ -75,8 +75,8 @@ export const NavLogo = styled(LinkRouter)`
   @media screen and (max-width: 968px) {
     display: block;
     position: fixed;
-    width: 15rem;
-    height: 15rem;
+    width: 2rem;
+    height: 2rem;
     top: 0;
     right: 0;
     transform: translate(0%, 5%);
@@ -161,19 +161,26 @@ export const Img = styled.img`
   border-bottom-right-radius: 5rem;
   border-bottom-left-radius: 5.5rem;
   border-top-left-radius: 5.5rem;
-  border-top-right-radius: 2rem;
-  animation: glow 5s ease-in-out infinite;
+  border-top-right-radius: 2.2rem;
+  animation: glow 3s ease-in-out forwards;
+  animation-delay:8s;
 
   @keyframes glow {
-    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92% {
+    0%,18%,20%,30%,50%,60%,70%,80%,90%,92% {
       box-shadow: none;
-    }18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100% {
+    }18.1%,20.1%,30.1%,40.1%,90.1%,92.1%,100% {
       box-shadow: inset 0 0 10px #119872, -10px 0 10px #119872,
         inset 0 0 20px  #119872, -10px 0 20px #119872, 
         inset 0 0 20px #119872,-10px 0 40px #119872, 
         inset 0 0 20px #119872, -20px 0 80px #119872,
-        inset 0 0 20px #119872, -15px 0 160px #119872;
+        inset 0 0 20px 10px #119872, -15px 0 160px #119872;
        
     }
+  }
+  @media screen and (max-width: 968px) {
+    padding-top:10px;
+    animation: none;
+    heigth:180px;
+    width:90px;
   }
 `;

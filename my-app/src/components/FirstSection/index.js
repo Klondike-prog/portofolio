@@ -1,20 +1,21 @@
 import React from "react";
-import { FirstBox, Title, MyEducation } from "./FirstSectionElements";
+import { FirstBox, Title, MyEducation,AnimateTitle,LastTitle} from "./FirstSectionElements";
+
+
+
 const FirstSection = () => {
   return (
     <FirstBox>
-      <Title>Catalin.niceToMeetYou()</Title>
+
+      <AnimateTitle>
+      <Title>Catalin.niceToMeetYou( )</Title>
+      </AnimateTitle>
       <MyEducation>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
+        &lt;p&gt; Hi there, my name is Catalin Bondane and I am a Front End Developer from Romania. If You want to Learn more about my  life-journey,
+        how I got where I am today, my work experience, or if You just want to explore this little world I made feel free to 
+        start  SCROLLING. &lt;/p&gt;
       </MyEducation>
+      <LastTitle>Enjoy !</LastTitle>
     </FirstBox>
   );
 };

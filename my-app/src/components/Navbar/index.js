@@ -18,16 +18,16 @@ const Navbar = ({ toggle }) => {
     <>
       
       <NavLogo to="/">
-        <motion.div  initial={{ x: "-100vw" }}
-        animate={{ x: "0" }}
-        transition={{ duration: 1, type: "spring", stiffness:35}}>
+        <motion.div  initial={{ y: "-100vw" }}
+        animate={{ y: "0" }}
+        transition={{ delay:5,duration: 1, type: "spring", stiffness:35}}>
         <Img src={Image} id="#logo" />
         </motion.div>
       </NavLogo>
       <motion.div
         initial={{ y: "-100vw" }}
         animate={{ y: "0" }}
-        transition={{ duration: 0.1, type: "spring", stiffness: 29}}
+        transition={{delay:4, duration: 0.1, type: "spring", stiffness: 29}}
       >
         <Nav>
           <NavbarContainer>
@@ -38,7 +38,7 @@ const Navbar = ({ toggle }) => {
               <motion.div
                 initial={{ x: "-5vw" }}
                 animate={{ x: "0" }}
-                transition={{delay:0.8, duration: 0.5, type: "spring", stiffness: 180, mass:1.5}}
+                transition={{delay:4.8, duration: 0.5, type: "spring", stiffness: 180, mass:1.5}}
               >
                 <NavItem>
                   <NavLinks to="about">.About()</NavLinks>
@@ -46,14 +46,14 @@ const Navbar = ({ toggle }) => {
               </motion.div>
               <motion.div initial={{ x: "+5vw" }}
                 animate={{ x: "0" }}
-                transition={{delay:0.8, duration: 0.5, type: "spring", stiffness: 200,mass:1.3 }}>
+                transition={{delay:4.8, duration: 0.5, type: "spring", stiffness: 200,mass:1.3 }}>
               <NavItem>
                 <NavLinks to="work">.Work()</NavLinks>
               </NavItem>
               </motion.div>
               <motion.div initial={{ x: "+15vw" }}
                 animate={{ x: "0" }}
-                transition={{delay:0.8, duration: 0.5, type: "spring", stiffness: 170,mass:1.7 }}>
+                transition={{delay:4.8, duration: 0.5, type: "spring", stiffness: 170,mass:1.7 }}>
               <NavItem>
                 <NavLinks to="work">.Contact()</NavLinks>
               </NavItem>
