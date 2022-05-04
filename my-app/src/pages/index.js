@@ -15,6 +15,7 @@ const Home = () => {
       <Navbar toggle={toggle} />
       <IntroSection />
       <FirstSection/>
+     
     </>
   );
 };
